@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const StandaloneResourceLink = ({ link, title, internal, icon }) => {
+const StandaloneResourceLink = ({ link, title, internal, icon }) => {
 	const classes = useStyles();
 	return (
 		<>
@@ -48,3 +48,5 @@ export const StandaloneResourceLink = ({ link, title, internal, icon }) => {
 		</>
 	);
 };
+
+export default StandaloneResourceLink;

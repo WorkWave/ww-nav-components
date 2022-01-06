@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const MobileNav = ({ children, handleModalClick, ctaText }) => {
+const MobileNav = ({ children, handleModalClick, ctaText }) => {
 	const classes = useStyles();
 	const popupState = usePopupState({
 		variant: 'popper',
@@ -103,3 +103,5 @@ export const MobileNav = ({ children, handleModalClick, ctaText }) => {
 		</>
 	);
 };
+
+export default MobileNav;

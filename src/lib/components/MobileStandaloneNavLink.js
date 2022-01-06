@@ -16,13 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const MobileStandaloneNavLink = ({
-	link,
-	icon,
-	internal,
-	closeNav,
-	title,
-}) => {
+const MobileStandaloneNavLink = ({ link, icon, internal, closeNav, title }) => {
 	const classes = useStyles();
 	return (
 		<>
@@ -77,3 +71,5 @@ export const MobileStandaloneNavLink = ({
 		</>
 	);
 };
+
+export default MobileStandaloneNavLink;

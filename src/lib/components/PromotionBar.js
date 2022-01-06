@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const PromotionBar = ({ promotion, open, setOpen }) => {
+const PromotionBar = ({ promotion, open, setOpen }) => {
 	const classes = useStyles();
 
 	return (
@@ -85,3 +85,5 @@ export const PromotionBar = ({ promotion, open, setOpen }) => {
 		</Collapse>
 	);
 };
+
+export default PromotionBar;

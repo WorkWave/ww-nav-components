@@ -15,9 +15,9 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { FaMobileNavItem } from '../content/nav/mobile/items/FaMobileNavItem';
-import { MobileProductItem } from '../content/nav/mobile/items/MobileProductItem';
-import { MobileSalesSupportItem } from '../content/nav/mobile/items/MobileSalesSupportItem';
+import { FaMobileNavItem } from './content/nav/mobile/items/FaMobileNavItem';
+import { MobileProductItem } from './content/nav/mobile/items/MobileProductItem';
+import { MobileSalesSupportItem } from './content/nav/mobile/items/MobileSalesSupportItem';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const MobileNavLink = ({ header, links, icon, closeNav }) => {
+const MobileNavLink = ({ header, links, icon, closeNav }) => {
 	const classes = useStyles();
 	const [industryLinks, setIndustryLinks] = useState([]);
 
@@ -126,3 +126,5 @@ export const MobileNavLink = ({ header, links, icon, closeNav }) => {
 		</div>
 	);
 };
+
+export default MobileNavLink;

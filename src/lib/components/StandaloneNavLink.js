@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const StandaloneNavLink = ({ title, link, internal, icon }) => {
+const StandaloneNavLink = ({ title, link, internal, icon }) => {
 	const classes = useStyles();
 	return (
 		<Typography>
@@ -44,3 +44,5 @@ export const StandaloneNavLink = ({ title, link, internal, icon }) => {
 		</Typography>
 	);
 };
+
+export default StandaloneNavLink;

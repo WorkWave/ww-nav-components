@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const Navbar = ({ image, children }) => {
+const Navbar = ({ image, children }) => {
 	const classes = useStyles();
 
 	const med = useMediaQuery('(max-width: 960px)');
@@ -75,3 +75,5 @@ export const Navbar = ({ image, children }) => {
 		</>
 	);
 };
+
+export default Navbar;

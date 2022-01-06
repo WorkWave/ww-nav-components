@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const ResourceBar = ({ children }) => {
+const ResourceBar = ({ children }) => {
 	const classes = useStyles();
 	const sm = useMediaQuery('(max-width: 630px)');
 
@@ -43,3 +43,5 @@ export const ResourceBar = ({ children }) => {
 		</div>
 	);
 };
+
+export default ResourceBar;

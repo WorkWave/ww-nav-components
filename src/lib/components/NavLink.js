@@ -13,10 +13,10 @@ import {
 } from 'material-ui-popup-state/hooks';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import { HeaderNavContent } from '../content/nav/desktop/HeaderNavContent';
-import { NoHeaderNavContent } from '../content/nav/desktop/NoHeaderNavContent';
-import { SalesNavContent } from '../content/nav/desktop/SalesNavContent';
-import { SupportNavContent } from '../content/nav/desktop/SupportNavContent';
+import { HeaderNavContent } from './content/nav/desktop/HeaderNavContent';
+import { NoHeaderNavContent } from './content/nav/desktop/NoHeaderNavContent';
+import { SalesNavContent } from './content/nav/desktop/SalesNavContent';
+import { SupportNavContent } from './content/nav/desktop/SupportNavContent';
 
 const useStyles = makeStyles((theme) => ({
 	options: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const NavLink = ({
+const NavLink = ({
 	header,
 	links,
 	calloutIcon,
@@ -154,3 +154,5 @@ export const NavLink = ({
 		</div>
 	);
 };
+
+export default NavLink;
