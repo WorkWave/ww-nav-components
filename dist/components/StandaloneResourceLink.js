@@ -36,9 +36,9 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 const StandaloneResourceLink = _ref => {
   let {
-    link,
-    title,
-    internal,
+    link = 'Example',
+    title = 'Example',
+    internal = false,
     icon
   } = _ref;
   const classes = useStyles();

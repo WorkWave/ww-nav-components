@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const MobileNav = ({ children, handleModalClick, ctaText }) => {
+const MobileNav = ({ children, handleModalClick, ctaText = 'GET STARTED' }) => {
 	const classes = useStyles();
 	const popupState = usePopupState({
 		variant: 'popper',

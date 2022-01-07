@@ -30,11 +30,11 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 const MobileStandaloneNavLink = _ref => {
   let {
-    link,
+    link = 'Example',
     icon,
-    internal,
+    internal = true,
     closeNav,
-    title
+    title = 'Example'
   } = _ref;
   const classes = useStyles();
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, internal ? /*#__PURE__*/_react.default.createElement(_gatsby.Link, {

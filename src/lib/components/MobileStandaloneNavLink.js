@@ -16,7 +16,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const MobileStandaloneNavLink = ({ link, icon, internal, closeNav, title }) => {
+const MobileStandaloneNavLink = ({
+	link = 'Example',
+	icon,
+	internal = true,
+	closeNav,
+	title = 'Example',
+}) => {
 	const classes = useStyles();
 	return (
 		<>

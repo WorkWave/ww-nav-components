@@ -56,13 +56,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NavLink = ({
-	header,
+	header = 'Example',
 	links,
 	calloutIcon,
 	calloutTitle,
 	calloutContent,
 	contentHeader,
-	internalLink,
+	internalLink = true,
 	handleModalClick,
 }) => {
 	const classes = useStyles();

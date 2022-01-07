@@ -38,9 +38,9 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 const StandaloneNavLink = _ref => {
   let {
-    title,
-    link,
-    internal,
+    title = 'Example',
+    link = 'Example',
+    internal = true,
     icon
   } = _ref;
   const classes = useStyles();

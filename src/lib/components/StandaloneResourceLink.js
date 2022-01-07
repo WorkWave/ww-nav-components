@@ -23,7 +23,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const StandaloneResourceLink = ({ link, title, internal, icon }) => {
+const StandaloneResourceLink = ({
+	link = 'Example',
+	title = 'Example',
+	internal = false,
+	icon,
+}) => {
 	const classes = useStyles();
 	return (
 		<>

@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const MobileNavLink = ({ header, links, icon, closeNav }) => {
+const MobileNavLink = ({ header = 'Example', links, icon, closeNav }) => {
 	const classes = useStyles();
 	const [industryLinks, setIndustryLinks] = useState([]);
 

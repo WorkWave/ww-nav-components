@@ -49,7 +49,7 @@ const MobileNav = _ref => {
   let {
     children,
     handleModalClick,
-    ctaText
+    ctaText = 'GET STARTED'
   } = _ref;
   const classes = useStyles();
   const popupState = (0, _hooks.usePopupState)({

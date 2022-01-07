@@ -24,7 +24,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const StandaloneNavLink = ({ title, link, internal, icon }) => {
+const StandaloneNavLink = ({
+	title = 'Example',
+	link = 'Example',
+	internal = true,
+	icon,
+}) => {
 	const classes = useStyles();
 	return (
 		<Typography>

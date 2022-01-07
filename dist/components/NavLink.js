@@ -88,13 +88,13 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 const NavLink = _ref => {
   let {
-    header,
+    header = 'Example',
     links,
     calloutIcon,
     calloutTitle,
     calloutContent,
     contentHeader,
-    internalLink,
+    internalLink = true,
     handleModalClick
   } = _ref;
   const classes = useStyles();

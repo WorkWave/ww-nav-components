@@ -42,7 +42,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 const PromotionBar = _ref => {
   let {
     promotion,
-    open,
+    open = true,
     setOpen
   } = _ref;
   const classes = useStyles();

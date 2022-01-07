@@ -60,7 +60,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 const MobileNavLink = _ref => {
   let {
-    header,
+    header = 'Example',
     links,
     icon,
     closeNav

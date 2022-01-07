@@ -66,13 +66,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ResourceLink = ({
-	header,
+	header = 'Example',
 	links,
 	calloutIcon,
 	calloutTitle,
 	calloutContent,
 	contentHeader,
-	internalLink,
+	internalLink = true,
 	handleModalClick,
 }) => {
 	const classes = useStyles();

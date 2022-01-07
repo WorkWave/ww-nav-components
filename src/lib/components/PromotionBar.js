@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const PromotionBar = ({ promotion, open, setOpen }) => {
+const PromotionBar = ({ promotion, open = true, setOpen }) => {
 	const classes = useStyles();
 
 	return (
