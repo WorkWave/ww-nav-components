@@ -40,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
 	popoverPaper: {
 		maxHeight: 'none',
 		width: '100%',
+		maxWidth: '100%',
+		left: '0 !important',
 		boxShadow: '0px 4px 4px rgba(9, 7, 37, 0.05)',
 		paddingTop: '1rem',
 		// marginTop: '-.5rem',
@@ -113,6 +115,8 @@ const NavLink = ({
 				PopoverClasses={{
 					paper: classes.popoverPaper,
 				}}
+				marginThreshold={0}
+				disableScrollLock={true}
 				TransitionComponent={Fade}
 				TransitionProps={{ timeout: 2 }}
 				anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
