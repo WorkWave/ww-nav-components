@@ -88,7 +88,21 @@ const ResourceLink = ({
 			? setSortedLinks(Object.values(sorted).flat())
 			: setSortedLinks(sorted);
 	}, [links]);
-	const { isOpen } = popupState;
+	
+		useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
+	const { isOpen, close } = popupState;
+
+	const handleScroll = () => {
+		close()
+	}
+
 
 	const lgNav = useMediaQuery('(max-width: 1280px)');
 	return (

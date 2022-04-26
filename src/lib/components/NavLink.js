@@ -80,7 +80,20 @@ const NavLink = ({
 			? setSortedLinks(Object.values(sorted).flat())
 			: setSortedLinks(sorted);
 	}, [links]);
-	const { isOpen } = popupState;
+
+	useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
+	const { isOpen, close } = popupState;
+
+	const handleScroll = () => {
+		close()
+	}
 
 	//if the array has length greater than 4, chunk array to length of 4 a piece, use forEach to
 	//create columns, map each to the column.
