@@ -41,14 +41,7 @@ export const MobileSalesSupportItem = ({
 						background: '#F1F2F5',
 						borderRadius: '5px',
 						padding: '5px',
-						color:
-							index % 2 === 0
-								? '#002D5C'
-								: index % 3 === 0
-								? '#0F95A4'
-								: index % 4 === 0
-								? '#055291'
-								: '#2A7ABC',
+						color: link.iconColor?.hexValue ?? '#002D5C',
 					}}
 				/>
 				<span style={{ fontSize: '1.2rem', fontWeight: 400 }}>
@@ -72,14 +65,7 @@ export const MobileSalesSupportItem = ({
 					background: '#F1F2F5',
 					borderRadius: '5px',
 					padding: '5px',
-					color:
-						index % 2 === 0
-							? '#002D5C'
-							: index % 3 === 0
-							? '#0F95A4'
-							: index % 4 === 0
-							? '#055291'
-							: '#2A7ABC',
+					color: link.iconColor?.hexValue ?? '#002D5C',
 				}}
 			/>{' '}
 			<span style={{ fontSize: '1.2rem', fontWeight: 400 }}>{link.title}</span>
