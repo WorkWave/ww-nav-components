@@ -78,7 +78,7 @@ const MobileNav = _ref => {
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_core.Button, {
     variant: "contained",
-    color: "primary",
+    color: "secondary",
     size: "large",
     onClick: e => handleModalClick(e),
     className: classes.cta

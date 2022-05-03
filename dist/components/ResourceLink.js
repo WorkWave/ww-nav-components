@@ -117,9 +117,23 @@ const ResourceLink = _ref => {
     const sorted = (0, _lodash.groupBy)(links, 'category');
     Object.keys(sorted).includes('undefined') ? setSortedLinks(Object.values(sorted).flat()) : setSortedLinks(sorted);
   }, [links]);
+  (0, _react.useEffect)(() => {
+    window.addEventListener('scroll', handleScroll, {
+      passive: true
+    });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const {
-    isOpen
+    isOpen,
+    close
   } = popupState;
+
+  const handleScroll = () => {
+    close();
+  };
+
   const lgNav = (0, _useMediaQuery.default)('(max-width: 1280px)');
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", _extends({
     className: classes.linkContainer,

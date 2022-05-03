@@ -29,6 +29,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 }));
 
 const MobileSalesSupportItem = _ref => {
+  var _link$iconColor$hexVa, _link$iconColor, _link$iconColor$hexVa2, _link$iconColor2;
+
   let {
     link,
     closeNav,
@@ -62,7 +64,7 @@ const MobileSalesSupportItem = _ref => {
       background: '#F1F2F5',
       borderRadius: '5px',
       padding: '5px',
-      color: index % 2 === 0 ? '#002D5C' : index % 3 === 0 ? '#0F95A4' : index % 4 === 0 ? '#055291' : '#2A7ABC'
+      color: (_link$iconColor$hexVa = (_link$iconColor = link.iconColor) === null || _link$iconColor === void 0 ? void 0 : _link$iconColor.hexValue) !== null && _link$iconColor$hexVa !== void 0 ? _link$iconColor$hexVa : '#002D5C'
     }
   }), /*#__PURE__*/_react.default.createElement("span", {
     style: {
@@ -84,7 +86,7 @@ const MobileSalesSupportItem = _ref => {
       background: '#F1F2F5',
       borderRadius: '5px',
       padding: '5px',
-      color: index % 2 === 0 ? '#002D5C' : index % 3 === 0 ? '#0F95A4' : index % 4 === 0 ? '#055291' : '#2A7ABC'
+      color: (_link$iconColor$hexVa2 = (_link$iconColor2 = link.iconColor) === null || _link$iconColor2 === void 0 ? void 0 : _link$iconColor2.hexValue) !== null && _link$iconColor$hexVa2 !== void 0 ? _link$iconColor$hexVa2 : '#002D5C'
     }
   }), ' ', /*#__PURE__*/_react.default.createElement("span", {
     style: {

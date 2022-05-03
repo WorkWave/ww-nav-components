@@ -34,41 +34,45 @@ const FaNavItems = _ref => {
     noHeaderWidth
   } = _ref;
   const classes = useStyles();
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, items.map((item, index) => /*#__PURE__*/_react.default.createElement(_core.Grid, {
-    item: true,
-    xs: noHeaderWidth,
-    key: index,
-    className: classes.item,
-    style: {
-      maxWidth: noHeaderWidth ? null : '95%'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_gatsby.Link, {
-    to: "/".concat(item.slug.current),
-    style: {
-      textDecoration: 'none'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_core.MenuItem, {
-    style: {
-      paddingLeft: 0
-    }
-  }, /*#__PURE__*/_react.default.createElement(_core.Grid, {
-    container: true,
-    alignItems: "center"
-  }, /*#__PURE__*/_react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
-    icon: ['fad', item.faIcon],
-    style: {
-      height: '25px',
-      width: '25px',
-      marginRight: '5px',
-      border: "1px solid #F1F2F5",
-      background: '#F1F2F5',
-      borderRadius: '5px',
-      padding: '3px',
-      color: index % 2 === 0 ? '#002D5C' : index % 3 === 0 ? '#0F95A4' : index % 4 === 0 ? '#055291' : '#2A7ABC'
-    }
-  }), ' ', /*#__PURE__*/_react.default.createElement(_core.Typography, {
-    className: classes.link
-  }, item.title)))))));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, items.map((item, index) => {
+    var _item$iconColor$hexVa, _item$iconColor;
+
+    return /*#__PURE__*/_react.default.createElement(_core.Grid, {
+      item: true,
+      xs: noHeaderWidth,
+      key: index,
+      className: classes.item,
+      style: {
+        maxWidth: noHeaderWidth ? null : '95%'
+      }
+    }, /*#__PURE__*/_react.default.createElement(_gatsby.Link, {
+      to: "/".concat(item.slug.current),
+      style: {
+        textDecoration: 'none'
+      }
+    }, /*#__PURE__*/_react.default.createElement(_core.MenuItem, {
+      style: {
+        paddingLeft: 0
+      }
+    }, /*#__PURE__*/_react.default.createElement(_core.Grid, {
+      container: true,
+      alignItems: "center"
+    }, /*#__PURE__*/_react.default.createElement(_reactFontawesome.FontAwesomeIcon, {
+      icon: ['fad', item.faIcon],
+      style: {
+        height: '25px',
+        width: '25px',
+        marginRight: '5px',
+        border: "1px solid #F1F2F5",
+        background: '#F1F2F5',
+        borderRadius: '5px',
+        padding: '3px',
+        color: (_item$iconColor$hexVa = (_item$iconColor = item.iconColor) === null || _item$iconColor === void 0 ? void 0 : _item$iconColor.hexValue) !== null && _item$iconColor$hexVa !== void 0 ? _item$iconColor$hexVa : '#002D5C'
+      }
+    }), ' ', /*#__PURE__*/_react.default.createElement(_core.Typography, {
+      className: classes.link
+    }, item.title)))));
+  }));
 };
 
 exports.FaNavItems = FaNavItems;
