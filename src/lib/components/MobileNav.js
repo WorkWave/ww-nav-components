@@ -56,7 +56,7 @@ const MobileNav = ({ children, handleModalClick, ctaText = 'GET STARTED' }) => {
 		<>
 			<Button
 				variant='contained'
-				color='primary'
+				color='secondary'
 				size='large'
 				onClick={(e) => handleModalClick(e)}
 				className={classes.cta}>
