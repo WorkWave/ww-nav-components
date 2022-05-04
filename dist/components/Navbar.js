@@ -32,7 +32,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     borderTop: "1.3px ".concat(theme.lightGray, " solid"),
     minHeight: '64px',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    boxShadow: '0px .5px 2px rgba(0, 0, 0, 0.3)'
   },
   cta: {
     fontSize: '20px',

@@ -52,7 +52,10 @@ const Navbar = ({ image, children }) => {
 		<>
 			<AppBar position='sticky' className={classes.appBar} elevation={0}>
 				<Toolbar disableGutters={true}>
-					<Container className={classes.root} fixed>
+					<Container
+						className={classes.root}
+						fluid={med && true}
+						fixed={!med && true}>
 						<Grid container direction='row' alignItems='center'>
 							<Grid item xs={6} md={2}>
 								<Link to='/'>
