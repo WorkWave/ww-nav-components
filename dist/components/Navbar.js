@@ -69,7 +69,8 @@ const Navbar = _ref => {
     disableGutters: true
   }, /*#__PURE__*/_react.default.createElement(_core.Container, {
     className: classes.root,
-    fixed: true
+    fluid: med && true,
+    fixed: !med && true
   }, /*#__PURE__*/_react.default.createElement(_core.Grid, {
     container: true,
     direction: "row",
