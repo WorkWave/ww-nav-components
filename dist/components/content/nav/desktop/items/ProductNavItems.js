@@ -40,13 +40,15 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 const ProductNavItems = _ref => {
   let {
     items,
-    noHeaderWidth
+    noHeaderWidth,
+    close
   } = _ref;
   const classes = useStyles();
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, items.map((item, index) => /*#__PURE__*/_react.default.createElement(_core.Grid, {
     item: true,
     key: index,
     className: classes.item,
+    onClick: () => close,
     style: {
       maxWidth: noHeaderWidth ? null : '95%'
     }

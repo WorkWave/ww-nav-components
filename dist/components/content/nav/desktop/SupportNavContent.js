@@ -31,7 +31,8 @@ const SupportNavContent = _ref => {
   let {
     links,
     contentHeader,
-    internalLink
+    internalLink,
+    close
   } = _ref;
   const classes = useStyles();
   const [selected, setSelected] = (0, _react.useState)(null);
@@ -43,10 +44,12 @@ const SupportNavContent = _ref => {
 
   const handleCall = e => {
     window.open("".concat(links[0].slug.current), '_self');
+    close();
   };
 
   const handleNavigate = e => {
     internalLink ? (0, _gatsby.navigate)("/".concat(links[1].slug.current)) : window.open("".concat(links[1].slug.current), '_blank');
+    close();
   };
 
   return /*#__PURE__*/_react.default.createElement(_core.Grid, {

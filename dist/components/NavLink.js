@@ -174,22 +174,26 @@ const NavLink = _ref => {
     links: sortedLinks,
     contentHeader: contentHeader,
     internalLink: internalLink,
-    handleModalClick: handleModalClick
+    handleModalClick: handleModalClick,
+    close: close
   }) : header === 'support' ? /*#__PURE__*/_react.default.createElement(_SupportNavContent.SupportNavContent, {
     links: sortedLinks,
     contentHeader: contentHeader,
-    internalLink: internalLink
+    internalLink: internalLink,
+    close: close
   }) : /*#__PURE__*/_react.default.createElement(_NoHeaderNavContent.NoHeaderNavContent, {
     links: sortedLinks,
     calloutIcon: calloutIcon,
     calloutTitle: calloutTitle,
-    calloutContent: calloutContent
+    calloutContent: calloutContent,
+    close: close
   }) : /*#__PURE__*/_react.default.createElement(_HeaderNavContent.HeaderNavContent, {
     links: sortedLinks,
     calloutIcon: calloutIcon,
     calloutTitle: calloutTitle,
     calloutContent: calloutContent,
-    header: header
+    header: header,
+    close: close
   }))));
 };
 

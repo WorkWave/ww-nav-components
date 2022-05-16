@@ -36,7 +36,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 const Section = _ref => {
   let {
     header,
-    content
+    content,
+    close
   } = _ref;
   const classes = useStyles();
   const [chunked, setChunked] = (0, _react.useState)([]);
@@ -62,10 +63,12 @@ const Section = _ref => {
     direction: "column"
   }, chunk[0].type === 'products' ? /*#__PURE__*/_react.default.createElement(_ProductNavItems.ProductNavItems, {
     items: chunk,
-    noHeaderWidth: null
+    noHeaderWidth: null,
+    close: close
   }) : /*#__PURE__*/_react.default.createElement(_FaNavItems.FaNavItems, {
     items: chunk,
-    noHeaderWidth: null
+    noHeaderWidth: null,
+    close: close
   }))));
 };
 
@@ -74,7 +77,8 @@ const HeaderNavContent = _ref2 => {
     links,
     calloutIcon,
     calloutTitle,
-    calloutContent
+    calloutContent,
+    close
   } = _ref2;
   return /*#__PURE__*/_react.default.createElement(_core.Grid, {
     container: true,
@@ -84,7 +88,8 @@ const HeaderNavContent = _ref2 => {
     spacing: 2
   }, Object.keys(links).map(link => /*#__PURE__*/_react.default.createElement(Section, {
     header: link,
-    content: links[link]
+    content: links[link],
+    close: close
   })), calloutTitle && /*#__PURE__*/_react.default.createElement(_NavCallout.NavCallout, {
     calloutIcon: calloutIcon,
     calloutTitle: calloutTitle,

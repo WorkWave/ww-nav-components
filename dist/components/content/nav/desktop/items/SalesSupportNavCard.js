@@ -37,7 +37,8 @@ const SalesSupportNavCard = _ref => {
     selected,
     handleHover,
     setSelected,
-    handleClick
+    handleClick,
+    close
   } = _ref;
   const {
     description,
@@ -51,6 +52,7 @@ const SalesSupportNavCard = _ref => {
     xs: 6,
     alignItems: "center",
     justifyContent: "center",
+    onClick: () => close,
     style: {
       marginBottom: '2rem'
     }

@@ -20,7 +20,8 @@ const NoHeaderNavContent = _ref => {
     links,
     calloutIcon,
     calloutTitle,
-    calloutContent
+    calloutContent,
+    close
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(_core.Grid, {
     container: true,
@@ -36,7 +37,8 @@ const NoHeaderNavContent = _ref => {
     justifyContent: "flex-start"
   }, /*#__PURE__*/_react.default.createElement(_FaNavItems.FaNavItems, {
     items: links,
-    noHeaderWidth: 3
+    noHeaderWidth: 3,
+    close: close
   })), calloutTitle && /*#__PURE__*/_react.default.createElement(_NavCallout.NavCallout, {
     calloutIcon: calloutIcon,
     calloutTitle: calloutTitle,

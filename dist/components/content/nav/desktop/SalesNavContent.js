@@ -29,7 +29,8 @@ const SalesNavContent = _ref => {
   let {
     links,
     contentHeader,
-    handleModalClick
+    handleModalClick,
+    close
   } = _ref;
   const classes = useStyles();
   const [selected, setSelected] = (0, _react.useState)(null);
@@ -64,13 +65,15 @@ const SalesNavContent = _ref => {
     selected: selected,
     handleHover: handleHover,
     setSelected: setSelected,
-    handleClick: handleCall
+    handleClick: handleCall,
+    close: close
   }), /*#__PURE__*/_react.default.createElement(_SalesSupportNavCard.SalesSupportNavCard, {
     cardContent: links[1],
     selected: selected,
     handleHover: handleHover,
     setSelected: setSelected,
-    handleClick: handleModalClick
+    handleClick: handleModalClick,
+    close: close
   }));
 };
 

@@ -41,10 +41,13 @@ const StandaloneNavLink = _ref => {
     title,
     link,
     internal,
-    icon
+    icon,
+    close
   } = _ref;
   const classes = useStyles();
-  return /*#__PURE__*/_react.default.createElement(_core.Typography, null, internal ? /*#__PURE__*/_react.default.createElement(_gatsby.Link, {
+  return /*#__PURE__*/_react.default.createElement(_core.Typography, {
+    onClick: () => close
+  }, internal ? /*#__PURE__*/_react.default.createElement(_gatsby.Link, {
     to: "/".concat(link.toLowerCase()),
     className: classes.link
   }, title) : /*#__PURE__*/_react.default.createElement("a", {
