@@ -10,6 +10,7 @@ export const NoHeaderNavContent = ({
 	calloutIcon,
 	calloutTitle,
 	calloutContent,
+	close,
 }) => {
 	return (
 		<Grid container direction='row' spacing={1}>
@@ -21,7 +22,7 @@ export const NoHeaderNavContent = ({
 				direction='row'
 				alignItems='flex-start'
 				justifyContent='flex-start'>
-				<FaNavItems items={links} noHeaderWidth={3} />
+				<FaNavItems items={links} noHeaderWidth={3} close={close} />
 			</Grid>
 
 			{calloutTitle && (

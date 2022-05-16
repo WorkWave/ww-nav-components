@@ -82,18 +82,18 @@ const NavLink = ({
 	}, [links]);
 
 	useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+		window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-}, []);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	const { isOpen, close } = popupState;
 
 	const handleScroll = () => {
-		close()
-	}
+		close();
+	};
 
 	//if the array has length greater than 4, chunk array to length of 4 a piece, use forEach to
 	//create columns, map each to the column.
@@ -142,12 +142,14 @@ const NavLink = ({
 								contentHeader={contentHeader}
 								internalLink={internalLink}
 								handleModalClick={handleModalClick}
+								close={close}
 							/>
 						) : header === 'support' ? (
 							<SupportNavContent
 								links={sortedLinks}
 								contentHeader={contentHeader}
 								internalLink={internalLink}
+								close={close}
 							/>
 						) : (
 							<NoHeaderNavContent
@@ -155,6 +157,7 @@ const NavLink = ({
 								calloutIcon={calloutIcon}
 								calloutTitle={calloutTitle}
 								calloutContent={calloutContent}
+								close={close}
 							/>
 						)
 					) : (
@@ -164,6 +167,7 @@ const NavLink = ({
 							calloutTitle={calloutTitle}
 							calloutContent={calloutContent}
 							header={header}
+							close={close}
 						/>
 					)}
 				</Container>

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const Section = ({ header, content }) => {
+const Section = ({ header, content, close }) => {
 	const classes = useStyles();
 	const [chunked, setChunked] = useState([]);
 
@@ -42,9 +42,9 @@ const Section = ({ header, content }) => {
 					justifyContent='flex-start'
 					direction='column'>
 					{chunk[0].type === 'products' ? (
-						<ProductNavItems items={chunk} noHeaderWidth={null} />
+						<ProductNavItems items={chunk} noHeaderWidth={null} close={close} />
 					) : (
-						<FaNavItems items={chunk} noHeaderWidth={null} />
+						<FaNavItems items={chunk} noHeaderWidth={null} close={close} />
 					)}
 				</Grid>
 			))}
@@ -57,6 +57,7 @@ export const HeaderNavContent = ({
 	calloutIcon,
 	calloutTitle,
 	calloutContent,
+	close,
 }) => {
 	return (
 		<Grid
@@ -66,7 +67,7 @@ export const HeaderNavContent = ({
 			justifyContent='flex-start'
 			spacing={2}>
 			{Object.keys(links).map((link) => (
-				<Section header={link} content={links[link]} />
+				<Section header={link} content={links[link]} close={close} />
 			))}
 			{calloutTitle && (
 				<NavCallout

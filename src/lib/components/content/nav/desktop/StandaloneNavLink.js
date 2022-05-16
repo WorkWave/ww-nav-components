@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const StandaloneNavLink = ({ title, link, internal, icon }) => {
+export const StandaloneNavLink = ({ title, link, internal, icon, close }) => {
 	const classes = useStyles();
 	return (
-		<Typography>
+		<Typography onClick={() => close}>
 			{internal ? (
 				<Link to={`/${link.toLowerCase()}`} className={classes.link}>
 					{title}

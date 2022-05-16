@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const FaNavItems = ({ items, noHeaderWidth }) => {
+export const FaNavItems = ({ items, noHeaderWidth, close }) => {
 	const classes = useStyles();
 	return (
 		<>
@@ -26,6 +26,7 @@ export const FaNavItems = ({ items, noHeaderWidth }) => {
 					xs={noHeaderWidth}
 					key={index}
 					className={classes.item}
+					onClick={() => close}
 					style={{ maxWidth: noHeaderWidth ? null : '95%' }}>
 					<Link to={`/${item.slug.current}`} style={{ textDecoration: 'none' }}>
 						<MenuItem style={{ paddingLeft: 0 }}>
@@ -40,7 +41,7 @@ export const FaNavItems = ({ items, noHeaderWidth }) => {
 										background: '#F1F2F5',
 										borderRadius: '5px',
 										padding: '3px',
-										color: item.iconColor?.hexValue ?? '#002D5C'
+										color: item.iconColor?.hexValue ?? '#002D5C',
 									}}
 								/>{' '}
 								<Typography className={classes.link}>{item.title}</Typography>

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const ProductNavItems = ({ items, noHeaderWidth }) => {
+export const ProductNavItems = ({ items, noHeaderWidth, close }) => {
 	const classes = useStyles();
 
 	return (
@@ -34,6 +34,7 @@ export const ProductNavItems = ({ items, noHeaderWidth }) => {
 					item
 					key={index}
 					className={classes.item}
+					onClick={() => close}
 					style={{ maxWidth: noHeaderWidth ? null : '95%' }}>
 					<a
 						href={item.slug.current}

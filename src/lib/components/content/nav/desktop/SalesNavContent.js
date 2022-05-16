@@ -11,7 +11,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const SalesNavContent = ({ links, contentHeader, handleModalClick }) => {
+export const SalesNavContent = ({
+	links,
+	contentHeader,
+	handleModalClick,
+	close,
+}) => {
 	const classes = useStyles();
 	const [selected, setSelected] = useState(null);
 
@@ -41,6 +46,7 @@ export const SalesNavContent = ({ links, contentHeader, handleModalClick }) => {
 				handleHover={handleHover}
 				setSelected={setSelected}
 				handleClick={handleCall}
+				close={close}
 			/>
 			<SalesSupportNavCard
 				cardContent={links[1]}
@@ -48,6 +54,7 @@ export const SalesNavContent = ({ links, contentHeader, handleModalClick }) => {
 				handleHover={handleHover}
 				setSelected={setSelected}
 				handleClick={handleModalClick}
+				close={close}
 			/>
 		</Grid>
 	);

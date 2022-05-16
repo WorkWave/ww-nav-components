@@ -12,7 +12,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const SupportNavContent = ({ links, contentHeader, internalLink }) => {
+export const SupportNavContent = ({
+	links,
+	contentHeader,
+	internalLink,
+	close,
+}) => {
 	const classes = useStyles();
 	const [selected, setSelected] = useState(null);
 
@@ -24,12 +29,14 @@ export const SupportNavContent = ({ links, contentHeader, internalLink }) => {
 
 	const handleCall = (e) => {
 		window.open(`${links[0].slug.current}`, '_self');
+		close();
 	};
 
 	const handleNavigate = (e) => {
 		internalLink
 			? navigate(`/${links[1].slug.current}`)
 			: window.open(`${links[1].slug.current}`, '_blank');
+		close();
 	};
 	return (
 		<Grid container direction='row' className={classes.text}>

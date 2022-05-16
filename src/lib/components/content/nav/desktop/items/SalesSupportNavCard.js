@@ -23,6 +23,7 @@ export const SalesSupportNavCard = ({
 	handleHover,
 	setSelected,
 	handleClick,
+	close,
 }) => {
 	const { description, faIcon, name } = cardContent;
 	const classes = useStyles();
@@ -34,6 +35,7 @@ export const SalesSupportNavCard = ({
 			xs={6}
 			alignItems='center'
 			justifyContent='center'
+			onClick={() => close}
 			style={{ marginBottom: '2rem' }}>
 			<Card
 				className={classes.card}
