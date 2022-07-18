@@ -55,14 +55,14 @@ const PromotionBar = _ref => {
     justifyContent: "center",
     alignItems: "center",
     className: classes.bar
-  }, /*#__PURE__*/_react.default.createElement(_core.Container, {
-    fixed: true
-  }, promotion._rawContent.map(content => /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center'
     }
-  }, /*#__PURE__*/_react.default.createElement(_core.Typography, {
+  }, /*#__PURE__*/_react.default.createElement(_core.Container, {
+    fixed: true
+  }, promotion._rawContent.map(content => /*#__PURE__*/_react.default.createElement(_core.Typography, {
     variant: "h6",
     style: {
       color: 'white',
@@ -97,7 +97,7 @@ const PromotionBar = _ref => {
         }, children);
       }
     }
-  }))))), /*#__PURE__*/_react.default.createElement(_Close.default, {
+  })))), /*#__PURE__*/_react.default.createElement(_Close.default, {
     style: {
       cursor: 'pointer',
       color: 'white',
@@ -105,7 +105,7 @@ const PromotionBar = _ref => {
       marginRight: '1rem'
     },
     onClick: e => setOpen(false)
-  })));
+  }))));
 };
 
 var _default = PromotionBar;
