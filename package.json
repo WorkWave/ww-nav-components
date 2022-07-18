@@ -1,6 +1,6 @@
 {
   "name": "ww-nav-components",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -43,8 +43,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.7",
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7"
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9"
   }
 }
