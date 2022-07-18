@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.down('sm')]: {
 			// marginLeft: '4rem',
 			lineHeight: '1.2',
+      maxWidth: '590px',
 		},
 		[theme.breakpoints.down('xs')]: {
 			marginLeft: '0',
@@ -40,7 +41,11 @@ const PromotionBar = ({ promotion, open = true, setOpen }) => {
 				className={classes.bar}>
 				<Container fixed>
 					{promotion._rawContent.map((content) => (
-						<Typography
+						<div style={{ 
+              display: 'flex',
+              alignItems: 'center',
+            }}>
+            <Typography
 							variant='h6'
 							style={{
 								color: 'white',
@@ -70,6 +75,7 @@ const PromotionBar = ({ promotion, open = true, setOpen }) => {
 								}}
 							/>
 						</Typography>
+            </div>
 					))}
 				</Container>
 				<CloseIcon
