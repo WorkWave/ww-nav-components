@@ -39,54 +39,54 @@ const PromotionBar = ({ promotion, open = true, setOpen }) => {
 				justifyContent='center'
 				alignItems='center'
 				className={classes.bar}>
-				<Container fixed>
-					{promotion._rawContent.map((content) => (
-						<div style={{ 
-              display: 'flex',
-              alignItems: 'center',
-            }}>
-            <Typography
-							variant='h6'
-							style={{
-								color: 'white',
-								textAlign: 'center',
-								margin: '.5rem 0',
-							}}>
-							<PortableText
-								content={content}
-								serializers={{
-									normal: ({ children }) => <span>{children}</span>,
-									link: ({ blank, children, href }) => {
-										return (
-											<a
-												href={href}
-												target='_blank'
-												rel='noopener noreferrer'
-												className={classes.text}
-												style={{
-													marginLeft: 'none',
-													fontWeight: 700,
-													textDecoration: '0',
-												}}>
-												{children}
-											</a>
-										);
-									},
-								}}
-							/>
-						</Typography>
-            </div>
-					))}
-				</Container>
-				<CloseIcon
-					style={{
-						cursor: 'pointer',
-						color: 'white',
-						position: 'relative',
-						marginRight: '1rem',
-					}}
-					onClick={(e) => setOpen(false)}
-				/>
+        <div style={{ 
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+          <Container fixed>
+            {promotion._rawContent.map((content) => (
+              <Typography
+                variant='h6'
+                style={{
+                  color: 'white',
+                  textAlign: 'center',
+                  margin: '.5rem 0',
+                }}>
+                <PortableText
+                  content={content}
+                  serializers={{
+                    normal: ({ children }) => <span>{children}</span>,
+                    link: ({ blank, children, href }) => {
+                      return (
+                        <a
+                          href={href}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className={classes.text}
+                          style={{
+                            marginLeft: 'none',
+                            fontWeight: 700,
+                            textDecoration: '0',
+                          }}>
+                          {children}
+                        </a>
+                      );
+                    },
+                  }}
+                />
+              </Typography>
+            ))}
+          </Container>
+          <CloseIcon
+            style={{
+              cursor: 'pointer',
+              color: 'white',
+              position: 'relative',
+              marginRight: '1rem',
+            }}
+            onClick={(e) => setOpen(false)}
+          />
+        </div>
 			</Grid>
 		</Collapse>
 	);
